@@ -11,7 +11,11 @@ object MyScreen extends LiftScreen {
 
   addFields(() => myRecord.is)
   
-  val isSave = field("Save ?", false, FormFieldId("id_isSaved"))
+  val isSave = field("Save ?", false, FormFieldId("id_isSaved_field"))
+  val category = field("Category", "None", FormFieldId("id_category_field"))
+  val amount = field("Quantity", 2, FormFieldId("id_quantity_field"))
+  
+  val comment = text("Comment", "no comment")
   
   def finish() = {
     S.notice("Finished")
